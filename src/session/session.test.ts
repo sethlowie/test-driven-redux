@@ -1,10 +1,4 @@
-import { createStore, Store } from "redux";
-
-const makeStore = (): Store => {
-  return createStore(() => {
-    return {};
-  });
-};
+import { makeStore } from "store";
 
 const sessionSelector = (state: any) => {
   return state.session;
