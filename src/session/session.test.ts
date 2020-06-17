@@ -6,18 +6,15 @@ const makeStore = (): Store => {
   });
 };
 
-const makeTestStore = () => {
-  const store = makeStore();
-  return {
-    get: (fn: any) => fn(store.getState())
-  };
+const sessionSelector = (state: any) => {
+  return state.session;
 };
 
 describe("session", () => {
   it("should start with no session", () => {
-    const store = makeTestStore();
+    const store = makeStore();
 
-    const session = store.get((state: any) => state.session);
+    const session = sessionSelector(store.getState());
 
     expect(session).toBeUndefined();
   });
