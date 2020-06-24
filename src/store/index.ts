@@ -1,7 +1,10 @@
-import { createStore, Store } from "redux";
+import { createStore, Store, combineReducers } from "redux";
+import session from "session";
 
 export const makeStore = (): Store => {
-  return createStore(() => {
-    return {};
-  });
+  return createStore(
+    combineReducers({
+      session
+    })
+  );
 };

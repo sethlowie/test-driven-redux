@@ -1,0 +1,6 @@
+{
+  "rulesDirectory": ["tslint-rules"],
+  "rules": {
+    "no-await": true
+  }
+}
